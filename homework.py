@@ -64,8 +64,7 @@ class Running(Training):
         coeff_calorie_2: int = 20 
         return ((coeff_calorie_1 * self.get_mean_speed() - coeff_calorie_2) 
                 * self.weight / self.M_IN_KM 
-                * (self.duration * self.M_IN_HOUR))
-                # формула расхода каллорий для бега
+                * (self.duration * self.M_IN_HOUR)) # формула расхода каллорий для бега
 
 
 class SportsWalking(Training):
@@ -156,4 +155,3 @@ if __name__ == '__main__':
     for workout_type, data in packages:
         training = read_package(workout_type, data)
         main(training)
-
