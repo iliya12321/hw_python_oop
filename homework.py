@@ -60,6 +60,7 @@ class Running(Training):
     """Тренировка: бег."""
     COEFF_CALORIE_RUNNING_1: int = 18  # коэффициент каллорий для бега
     COEFF_CALORIE_RUNNING_2: int = 20  # коэффициент каллорий для бега
+    
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
         return ((self.COEFF_CALORIE_RUNNING_1 * self.get_mean_speed()
@@ -71,6 +72,7 @@ class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
     COEFF_CALORIE_WALKING_1: float = 0.035  # каллории для спортивной ходьбы
     COEFF_CALORIE_WALKING_2: float = 0.029  # каллории для спортивной ходьбы
+    
     def __init__(self,
                  action: int,
                  duration: float,
